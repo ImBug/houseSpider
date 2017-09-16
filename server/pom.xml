@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>water.house</groupId>
+        <artifactId>houseSpider</artifactId>
+        <version>2.0.0-SNAPSHOT</version>
+    </parent>
+    <groupId>water.house</groupId>
+    <artifactId>server</artifactId>
+    <version>2.0.0-SNAPSHOT</version>
+    <name>server</name>
+    <url>http://maven.apache.org</url>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <dependencies>
+
+    <dependency>
+    	<groupId>water.house</groupId>
+    	<artifactId>common</artifactId>
+    	<version>2.0.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+    	<groupId>water.house</groupId>
+    	<artifactId>htmltool</artifactId>
+    	<version>2.0.0-SNAPSHOT</version>
+    </dependency>
+    
+    <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+     </dependency>
+        
+        <!-- 
+        <dependency>
+        	<groupId>org.hsqldb</groupId>
+	        <artifactId>hsqldb</artifactId>
+	        <scope>runtime</scope>
+    	</dependency>
+         -->
+    	
+    	<!-- 内存数据库h2--> 
+	    <dependency> 
+	        <groupId>com.h2database</groupId> 
+	        <artifactId>h2</artifactId>
+	         <scope>runtime</scope>
+	    </dependency>
+	    
+    <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+     </dependency>
+   
+    </dependencies>
+</project>
