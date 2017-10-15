@@ -56,6 +56,8 @@ public class HouseInfo extends PropertyInfo{
 	private String detailUrl;
 	private DealInfo dealInfo;
 	
+	private List<DealInfo> dealInfos;
+	
 	/**
 	 * @param args
 	 * @throws IOException 
@@ -73,7 +75,7 @@ public class HouseInfo extends PropertyInfo{
 					return new HouseInfo(new HttpRequest(detail));
 				})
 				.collect(Collectors.toList());
-		System.out.println(list);
+		System.out.println(list.get(0));
 	}
 	
 	public HouseInfo(){super();} 
@@ -249,6 +251,15 @@ public class HouseInfo extends PropertyInfo{
 
 	public void setDealInfo(DealInfo dealInfo) {
 		this.dealInfo = dealInfo;
+	}
+	
+	@Transient
+	public List<DealInfo> getDealInfos() {
+		return dealInfos;
+	}
+
+	public void setDealInfos(List<DealInfo> dealInfos) {
+		this.dealInfos = dealInfos;
 	}
 	
 }

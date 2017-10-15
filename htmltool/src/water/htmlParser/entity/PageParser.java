@@ -119,10 +119,6 @@ public class PageParser extends Parser {
 		return encode;
 	}
 	
-	public String toHtml(){
-		return ((MyPage)(getLexer().getPage())).getText();
-	}
-	
 	static class MyPage extends Page{
 
 		private static final long serialVersionUID = 1L;

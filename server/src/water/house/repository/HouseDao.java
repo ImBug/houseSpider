@@ -1,9 +1,11 @@
 package water.house.repository;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
 
 import water.house.entity.HouseInfo;
 
-public interface HouseDao extends CrudRepository<HouseInfo, String> {
+public interface HouseDao extends PagingAndSortingRepository<HouseInfo, String> {
+	
+	HouseInfo findById(String id);
 
 }
